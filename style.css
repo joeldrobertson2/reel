@@ -1,0 +1,57 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: Helvetica, sans-serif;
+	line-height: 1.5;
+	margin: 0;
+}
+
+html {
+	margin: 0;
+	padding: 0;
+}
+
+h1 {
+	border-bottom: 1px solid peru;
+}
+
+p {
+	margin: 0;
+}
+
+.page {
+	margin-top: 5em;
+}
+
+.container {
+	max-width: 1000px;
+	padding: 0 15px;
+	margin: 0 auto;
+}
+
+.reel {
+	display: flex;
+	overflow-x: auto;
+	overflow-y: hidden;
+	margin: 0 -15px;
+	scroll-snap-type: x mandatory;
+	scroll-padding-left: 15px;
+}
+
+.reel:after {
+	content: "";
+	flex: 0 0 15px;
+}
+
+.reel-item {
+	flex: 0 0 300px;
+	margin-left: 15px;
+	scroll-snap-align: start;
+}
+
+.reel-item-content {
+	background-color: peru;
+	padding: 15px;
+}
